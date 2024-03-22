@@ -1,0 +1,61 @@
+@import 'styles/variables';
+
+.sliderContainer {
+  display: grid;
+}
+
+.label {
+  color: $color-text-dark-gray;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.minMax {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rangeField {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 18px 0;
+  width: 100%;
+  background: $color-light-gray;
+  border-radius: 4px;
+  height: 4px;
+}
+@mixin thumb() {
+  background-image: url('../../../assets/arrows.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $color-primary;
+  width: 52px;
+  height: 36px;
+  border-radius: 100px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.rangeField::-webkit-slider-thumb {
+  @include thumb();
+}
+.rangeField::-webkit-slider-thumb:hover,
+.rangeField:focus::-webkit-slider-thumb {
+  background-color: $color-primary-hover;
+}
+.rangeField:active::-webkit-slider-thumb {
+  background-color: $color-primary;
+}
+
+.rangeField::-moz-range-thumb {
+  @include thumb();
+}
+.rangeField::-moz-range-thumb:hover,
+.rangeField:focus::-moz-range-thumb {
+  background-color: $color-primary-hover;
+}
+.rangeField:active::-moz-range-thumb {
+  background-color: $color-primary;
+}

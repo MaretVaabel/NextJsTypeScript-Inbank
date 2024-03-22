@@ -1,0 +1,80 @@
+@import 'styles/variables';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-background-purple;
+  padding: 80px 20px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    padding: 40px 16px;
+    gap: 10px;
+  }
+}
+
+@mixin textContainerShare() {
+  gap: 20px;
+  grid-template-rows: max-content max-content;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.textContainer {
+  @include textContainerShare();
+  padding: 80px 40px;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+  }
+}
+
+.textBlock {
+  padding: 0 40px;
+  text-align: center;
+  max-width: 600px;
+
+  @media (max-width: $mobile) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.paymentContainer {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  border-left: 1px solid $color-gary-border;
+  padding: 20px 30px;
+
+  @media (max-width: $tablet) {
+    border-left: none;
+    padding: 0;
+  }
+}
+
+.paymentTextContainer {
+  @include textContainerShare();
+  padding: 20px;
+
+  @media (max-width: $tablet) {
+    padding: 24px;
+  }
+}
+
+.paymentTextBlock {
+  padding: 10px 20px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    padding: 5px;
+  }
+}
+
+.description {
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

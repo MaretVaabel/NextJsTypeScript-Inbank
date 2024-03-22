@@ -1,0 +1,48 @@
+@import 'styles/variables';
+
+.section {
+  display: grid;
+  grid-template-columns: 40% auto;
+  gap: 20px;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 20px 50px 80px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 10px;
+  }
+}
+
+.textContainer {
+  gap: 20px;
+  grid-template-rows: max-content max-content;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 80px 40px;
+  border-radius: 200px;
+  background-color: $color-background-yellow;
+
+  @media (max-width: $tablet) {
+    order: 2;
+    border-radius: 100px;
+    padding: 64px 24px;
+  }
+}
+
+.textBlock {
+  padding: 10px 20px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    padding: 5px;
+  }
+}
+
+.photo {
+  @media (max-width: $tablet) {
+    order: 1;
+  }
+}

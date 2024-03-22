@@ -1,0 +1,95 @@
+@import 'styles/variables';
+
+.container {
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.inputContainer {
+  height: 100%;
+  display: grid;
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  color: $color-input;
+  background-color: $color-white;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 8px;
+  top: -10px;
+  left: 10px;
+}
+
+.inputField {
+  padding: 8px;
+  background-color: $color-white;
+  border: 1px solid $color-disabled;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+
+  input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-text-dark;
+  }
+
+  &:focus {
+    border: 2px solid $color-input;
+  }
+  &:hover {
+    border: 1px solid $color-input;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  cursor: not-allowed;
+
+  .inputField {
+    color: $color-text-gray;
+    border: 1px solid $color-disabled;
+    background-color: $color-input-disabled;
+  }
+  .label,
+  input {
+    color: $color-text-gray;
+    pointer-events: none;
+  }
+}
+
+.error {
+  .inputField {
+    border-color: $color-error;
+  }
+  .label,
+  .subText {
+    color: $color-error;
+  }
+
+  &.labelText input {
+    color: $color-error;
+  }
+}
+
+.subText {
+  padding: 4px 16px 0 16px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-text-dark-gray;
+}
+
+.labelText {
+  input {
+    color: $color-text-dark-gray;
+  }
+}

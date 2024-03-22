@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.header {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  background-color: $color-background-main;
+  overflow-x: hidden;
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}

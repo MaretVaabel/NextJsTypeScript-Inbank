@@ -1,0 +1,69 @@
+@import 'styles/variables';
+
+.btn {
+  display: grid;
+  appearance: none;
+  align-items: center;
+  cursor: pointer;
+  overflow: visible;
+  text-decoration: none;
+  border-radius: 100px;
+  height: fit-content;
+  width: max-content;
+  white-space: nowrap;
+  padding: 12px 24px;
+
+  .buttonText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.primary {
+  background-color: $color-primary;
+  color: $color-text-dark;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-hover;
+  }
+  &:active {
+    background-color: $color-primary;
+  }
+}
+
+.secondary {
+  background-color: $color-secondary;
+  color: $color-text-dark;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-secondary, 10%);
+  }
+
+  &:active {
+    background-color: $color-secondary;
+  }
+}
+
+.disabled {
+  background-color: $color-disabled;
+  color: $color-text-gray;
+}
+
+.text {
+  border-radius: 0;
+  padding: 4px 0;
+  align-items: left;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $color-primary;
+  }
+}

@@ -1,0 +1,36 @@
+@import 'styles/variables';
+
+.contactBlock {
+  display: grid;
+  color: $color-text-dark;
+
+  .textBlock {
+    display: grid;
+    gap: 10px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .mainTitle {
+    font-family: var(--font-bitter);
+    font-size: 68px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 72px;
+
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
